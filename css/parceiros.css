@@ -1,13 +1,18 @@
+* {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
-    color: #333;
 }
 
 header {
-    background-color: #4CAF50;
+    background-color: #056595;
     color: white;
     padding: 1rem 0;
     text-align: center;
@@ -36,20 +41,20 @@ main {
     transform: scale(1.05);
 }
 
-.ong-card h2 {
-    color: #4CAF50;
-}
-
 .ong-card p {
     margin: 0.5rem 0;
 }
 
 footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 1rem 0;
-    position: absolute;
-    bottom: 0;
     width: 100%;
+    background-color: #D9D9D9;
+    text-align: center;
+    font-size: 16px;
+    font-style: italic;
+    font-weight: bold;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
 }
