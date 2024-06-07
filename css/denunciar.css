@@ -1,0 +1,184 @@
+* {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+#senha-error, #form-error {
+    color: red;
+    display: none;
+}
+
+body {
+    background-color: #056595;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    height: 100vh; 
+    padding: 20px; /* Adicionado para evitar corte em telas pequenas */
+}
+
+header {
+    width: 100%;
+    background-color: #D9D9D9;
+    text-align: center;
+    padding: 12px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+h1 {
+    margin: 0;
+    font-size: 36px;
+}
+
+.black {
+    color: black;
+}
+
+.blue {
+    color: blue;
+}
+
+.container {
+    width: 100%;
+    max-width: 575px; /* Limitar largura máxima para telas maiores */
+    height: auto;
+    background-color: #ffffff; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px; 
+    padding: 20px; 
+    margin-top: 60px; /* Adicionado para espaçar abaixo do header */
+    margin-bottom: 60px; /* Adicionado para espaçar acima do footer */
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 24px; 
+    color: #333333; 
+}
+
+form {
+    width: 100%;
+    max-width: 500px; /* Limitar largura máxima para o formulário */
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin: 10px 0 5px 0;
+    font-weight: bold; 
+    color: #333333; 
+}
+
+input {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #ffffff;
+    box-sizing: border-box; 
+}
+
+input[type="radio"] {
+    display: inline;
+    margin: 0 10px 0 0;
+}
+
+label {
+    display: inline;
+    margin: 0 10px 0 0;
+}
+
+.radio-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.radio-group input[type="radio"] {
+    margin: 0 10px 0 0;
+}
+
+.radio-group label {
+    margin: 0 10px 0 0;
+}
+
+button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007BFF;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s; 
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.senha-error{
+    color: red; 
+    display: none;
+}
+
+footer {
+    width: 100%;
+    background-color: #D9D9D9;
+    text-align: center;
+    font-size: 16px;
+    font-style: italic;
+    font-weight: bold;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 28px;
+    }
+
+    .container {
+        width: 90%;
+        padding: 15px;
+    }
+
+    form {
+        width: 100%;
+    }
+
+    button {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 24px;
+    }
+
+    .container {
+        width: 100%;
+        padding: 10px;
+    }
+
+    form {
+        width: 100%;
+    }
+
+    button {
+        font-size: 12px;
+        padding: 8px;
+    }
+}
