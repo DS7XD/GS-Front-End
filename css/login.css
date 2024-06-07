@@ -39,8 +39,9 @@ header {
 }
 
 .container {
-    width: 575px;
-    height: 767px;
+    width: 100%;
+    max-width: 575px;
+    height: auto;
     background-color: #ffffff;
     display: flex;
     flex-direction: column;
@@ -50,7 +51,7 @@ header {
     border-radius: 10px;
     padding: 20px;
     margin-top: 80px;
-    margin-bottom: 40px; /* Add margin to account for footer height */
+    margin-bottom: 40px;
 }
 
 .container h1 {
@@ -60,7 +61,8 @@ header {
 }
 
 form {
-    width: 80%;
+    width: 100%;
+    max-width: 460px;
     display: flex;
     flex-direction: column;
 }

@@ -1,78 +1,106 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BlueWave - Cadastro de Usuário</title>
-    <link rel="icon" href="img/icone/icon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="css/cadastro_user.css">
-</head>
-<body>
+    <link rel="icon" href="img/icone/icon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="css/cadastro_user.css" />
+  </head>
+  <body>
     <header>
-        <h1 id="BlueWave"><span class="blue">Blue</span><span class="black">Wave</span></h1>
+      <h1 id="BlueWave">
+        <span class="blue">Blue</span><span class="black">Wave</span>
+      </h1>
     </header>
-        <div class="container">
-            <h1>Cadastro de usuário</h1>
-            <form action="login.html" method="post" onsubmit="return validarSenha()">
-                <label for="nome">Insira seu nome:</label>
-                <input type="text" id="nome" name="nome" required>
+    <div class="container">
+        <h1>Cadastro de usuário</h1>
+        <form id="cadastroForm">
+            <label for="nome">Insira seu nome:</label>
+            <input type="text" id="nome" name="nome" placeholder="Insira o Nome" required>
 
-                <label for="dataNascimento">Data de Nascimento:</label>
-                <input type="date" id="dataNascimento" name="dataNascimento" min="1930-01-01" max="2024-06-06" required>
+            <label for="dataNascimento">Data de Nascimento:</label>
+            <input type="date" id="dataNascimento" name="dataNascimento" min="1930-01-01" max="2024-06-06" required>
 
-                <label for="celular">Insira seu número de celular:</label>
-                <input type="text" id="celular" name="celular" onkeydown="aplicarMascara(this, 'celular')" maxlength="15" required>
+            <label for="celular">Insira seu número de celular:</label>
+            <input type="text" id="celular" name="celular" onkeydown="aplicarMascara(this, 'celular')" maxlength="15" placeholder="Insira seu número de celular: (00) 99999-9999" required>
 
-                <label for="email">Insira um email:</label>
-                <input type="email" id="email" name="email" required>
+            <label for="email">Insira um email:</label>
+            <input type="email" id="email" name="email" placeholder="Insira o Email" required>
 
-                <label for="senha">Insira uma senha:</label>
-                <input type="password" id="senha" name="senha" required>
+            <label for="senha">Insira uma senha:</label>
+            <input type="password" id="senha" name="senha" placeholder="Insira Senha" required>
 
-                <label for="confirma-senha">Confirme a senha:</label>
-                <input type="password" id="confirma-senha" name="confirma-senha" required>
+            <label for="confirma-senha">Confirme a senha:</label>
+            <input type="password" id="confirma-senha" name="confirma-senha" placeholder="Confirmar Senha" required>
 
-                <div id="senha-error">As senhas não correspondem.</div>
+            <div id="senha-error">As senhas não correspondem.</div>
+            <div id="form-error">Todos os campos devem ser preenchidos corretamente.</div>
 
-                <button type="submit">Cadastrar</button>
-            </form>
-        </div>
+            <button type="button" class="button" onclick="validarFormulario()">Cadastrar</button>
+        </form>
+    </div>
     <footer>
-        <p>© BlueWave 2024</p>
-        <p>551124 - Lucas Leal das Chagas | 554874 - João Gabriel Boaventura Marques e Silva | 558791 - Lucas de Melo Pinheiro Pinho</p>
+      <p>© BlueWave 2024</p>
+      <p>
+        551124 - Lucas Leal das Chagas | 554874 - João Gabriel Boaventura
+        Marques e Silva | 558791 - Lucas de Melo Pinheiro Pinho
+      </p>
     </footer>
-    <script>
-        function validarSenha() {
-            var senha = document.getElementById("senha").value;
-            var confirmaSenha = document.getElementById("confirma-senha").value;
+<script>
+    function validarSenha() {
+        var senha = document.getElementById("senha").value;
+        var confirmaSenha = document.getElementById("confirma-senha").value;
 
-            if (senha !== confirmaSenha) {
-                document.getElementById("senha-error").style.display = "block";
-                return false;
-            } else {
-                document.getElementById("senha-error").style.display = "none";
-                return true;
-            }
+        if (senha !== confirmaSenha) {
+            document.getElementById("senha-error").style.display = "block";
+            return false;
+        } else {
+            document.getElementById("senha-error").style.display = "none";
+            return true;
+        }
+    }
+
+    function validarFormulario() {
+        var nome = document.getElementById("nome").value;
+        var dataNascimento = document.getElementById("dataNascimento").value;
+        var celular = document.getElementById("celular").value;
+        var email = document.getElementById("email").value;
+        var senha = document.getElementById("senha").value;
+        var confirmaSenha = document.getElementById("confirma-senha").value;
+
+        if (!nome || !dataNascimento || !celular || !email || !senha || !confirmaSenha) {
+            document.getElementById("form-error").style.display = "block";
+            return false;
+        } else {
+            document.getElementById("form-error").style.display = "none";
         }
 
-        function aplicarMascara(campo, formato) {
-            const mascaraCelular = ['(', /\d/, /\d/, ')', ' ', /\d/, /\d/, /\d/, /\d/, /\d/, '-', /\d/, /\d/, /\d/, /\d/];
-            const mascaraTelefone = ['(', /\d/, /\d/, ')', ' ', /\d/, /\d/, /\d/, '-', /\d/, /\d/, /\d/, /\d/];
-
-            const mascara = formato === 'celular' ? mascaraCelular : mascaraTelefone;
-            const value = campo.value.replace(/\D/g, '');
-            let newValue = '';
-
-            for (let i = 0; i < value.length && i < mascara.length; i++) {
-                if (typeof mascara[i] === 'string') {
-                    newValue += mascara[i];
-                } else {
-                    newValue += value.charAt(i);
-                }
-            }
-
-            campo.value = newValue;
+        if (validarSenha()) {
+            document.getElementById("cadastroForm").submit();
+            window.location.href = 'telalogin.html';
         }
-    </script>
+    }
+
+    function aplicarMascara(campo, formato) {
+        if (formato === 'celular') {
+            const separador1 = '(';
+            const separador2 = ')';
+            const separador3 = ' ';
+            const separador4 = '-';
+            const tamanho1 = 0;
+            const tamanho2 = 3;
+            const tamanho4 = 10; 
+
+            if (campo.value.length === tamanho1) {
+                campo.value += separador1;
+            } else if (campo.value.length === tamanho2) {
+                campo.value += separador2 + separador3;
+            } else if (campo.value.length === tamanho4) {
+                campo.value += separador4;
+            }
+        }
+    }
+</script>
 </body>
 </html>

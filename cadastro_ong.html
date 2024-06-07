@@ -1,97 +1,251 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BlueWave - Cadastro de ONG</title>
-    <link rel="icon" href="img/icone/icon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="css/cadastro_org.css">
-</head>
-<body>
+    <link rel="icon" href="img/icone/icon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="css/cadastro_org.css" />
+  </head>
+  <body>
     <header>
-        <h1 id="BlueWave"><span class="blue">Blue</span><span class="black">Wave</span></h1>
+      <h1 id="BlueWave">
+        <span class="blue">Blue</span><span class="black">Wave</span>
+      </h1>
     </header>
     <div class="container">
+<<<<<<< HEAD
         <h1>Cadastro de usuário</h1>
-        <form action="login.html" method="post" onsubmit="return validarSenha()">
+        <form id="cadastroForm">
             <label for="nome">Insira o nome da ONG:</label>
-            <input type="text" id="nome" name="nome" placeholder="NOME" required>
+            <input type="text" id="nome" name="nome" placeholder="Insira o Nome" required>
+            
+            <label for="CNPJ">Insira o CNPJ:</label>
+            <input type="text" id="CNPJ" name="CNPJ" onkeydown="aplicarMascara(this, 'cnpj')" maxlength="18" placeholder="Insira CNPJ: 00.000.000/0000-00" required>
             
             <label for="telefone">Insira seu número de telefone para contato:</label>
-            <input type="text" id="telfone" name="telefone" onkeydown="aplicarMascara(this, 'telefone')" maxlength="14" placeholder="NÚMERO DE TELEFONE (DIGITE APENAS OS NÚMEROS)" required>
+            <input type="text" id="telefone" name="telefone" onkeydown="aplicarMascara(this, 'telefone')" maxlength="14" placeholder="Insira seu número de celular: (00) 0000-0000" required>
 
             <label for="celular">Insira seu número de celular para contato:</label>
-            <input type="text" id="celular" name="celular" onkeydown="aplicarMascara(this, 'celular')" maxlength="15" placeholder="NÚMERO DE CELULAR (DIGITE APENAS OS NÚMEROS) 𝙊𝙋𝙄𝘾𝙄𝙊𝙉𝘼𝙇">
+            <input type="text" id="celular" name="celular" onkeydown="aplicarMascara(this, 'celular')" maxlength="15" placeholder="Insira seu número de celular: (99) 99999-9999 𝙊𝙋𝙄𝘾𝙄𝙊𝙉𝘼𝙇">
 
             <label for="email">Insira um email:</label>
-            <input type="email" id="email" name="email" placeholder="EMAIL"required>
+            <input type="email" id="email" name="email" placeholder="Insira um email" required>
 
             <label for="senha">Insira uma senha:</label>
-            <input type="password" id="senha" name="senha" placeholder="SENHA" required>
+            <input type="password" id="senha" name="senha" placeholder="Insira uma Senha" required>
 
             <label for="confirma-senha">Confirme a senha:</label>
-            <input type="password" id="confirma-senha" name="confirma-senha" placeholder="CONFIRMAR SENHA" required>
+            <input type="password" id="confirma-senha" name="confirma-senha" placeholder="Confirmar Senha" required>
 
             <div id="senha-error">As senhas não correspondem.</div>
+            <div id="form-error">Todos os campos devem ser preenchidos corretamente.</div>
 
-            <button type="submit">Cadastrar</button>
+            <button type="button" class="button" onclick="validarFormulario()">Cadastrar</button>
         </form>
+=======
+      <h1>Cadastro de usuário</h1>
+      <form action="login.html" method="post" onsubmit="return validarSenha()">
+        <label for="nome">Insira o nome da ONG:</label>
+        <input type="text" id="nome" name="nome" placeholder="NOME" required />
+
+        <label for="telefone"
+          >Insira seu número de telefone para contato:</label
+        >
+        <input
+          type="text"
+          id="telfone"
+          name="telefone"
+          onkeydown="aplicarMascara(this, 'telefone')"
+          maxlength="14"
+          placeholder="NÚMERO DE TELEFONE (DIGITE APENAS OS NÚMEROS)"
+          required
+        />
+
+        <label for="celular">Insira seu número de celular para contato:</label>
+        <input
+          type="text"
+          id="celular"
+          name="celular"
+          onkeydown="aplicarMascara(this, 'celular')"
+          maxlength="15"
+          placeholder="NÚMERO DE CELULAR (DIGITE APENAS OS NÚMEROS) 𝙊𝙋𝙄𝘾𝙄𝙊𝙉𝘼𝙇"
+        />
+
+        <label for="email">Insira um email:</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="EMAIL"
+          required
+        />
+
+        <label for="senha">Insira uma senha:</label>
+        <input
+          type="password"
+          id="senha"
+          name="senha"
+          placeholder="SENHA"
+          required
+        />
+
+        <label for="confirma-senha">Confirme a senha:</label>
+        <input
+          type="password"
+          id="confirma-senha"
+          name="confirma-senha"
+          placeholder="CONFIRMAR SENHA"
+          required
+        />
+
+        <div id="senha-error">As senhas não correspondem.</div>
+
+        <button type="submit">Cadastrar</button>
+      </form>
+>>>>>>> c724498a447de188add1bab2a593786aaacf16f2
     </div>
     <footer>
-        <p>© BlueWave 2024</p>
-        <p>551124 - Lucas Leal das Chagas | 554874 - João Gabriel Boaventura Marques e Silva | 558791 - Lucas de Melo Pinheiro Pinho</p>
+      <p>© BlueWave 2024</p>
+      <p>
+        551124 - Lucas Leal das Chagas | 554874 - João Gabriel Boaventura
+        Marques e Silva | 558791 - Lucas de Melo Pinheiro Pinho
+      </p>
     </footer>
-</body>
+<<<<<<< HEAD
 <script>
+=======
+  </body>
+  <script>
+>>>>>>> c724498a447de188add1bab2a593786aaacf16f2
     function validarSenha() {
+      var senha = document.getElementById("senha").value;
+      var confirmaSenha = document.getElementById("confirma-senha").value;
+
+      if (senha !== confirmaSenha) {
+        document.getElementById("senha-error").style.display = "block";
+        return false;
+      } else {
+        document.getElementById("senha-error").style.display = "none";
+        return true;
+      }
+    }
+
+    function validarFormulario() {
+        var nome = document.getElementById("nome").value;
+        var telefone = document.getElementById("telefone").value;
+        var celular = document.getElementById("celular").value;
+        var email = document.getElementById("email").value;
         var senha = document.getElementById("senha").value;
         var confirmaSenha = document.getElementById("confirma-senha").value;
 
-        if (senha !== confirmaSenha) {
-            document.getElementById("senha-error").style.display = "block";
+        if (!nome || !telefone || !email || !senha || !confirmaSenha) {
+            document.getElementById("form-error").style.display = "block";
             return false;
         } else {
-            document.getElementById("senha-error").style.display = "none";
-            return true;
+            document.getElementById("form-error").style.display = "none";
+        }
+
+        if (validarSenha()) {
+            document.getElementById("cadastroForm").submit();
+            window.location.href = 'telalogin.html';
         }
     }
 
     function aplicarMascara(campo, formato) {
-    if (formato === 'celular') {
-        const separador1 = '(';
-        const separador2 = ')';
-        const separador3 = ' ';
-        const separador4 = '-';
+<<<<<<< HEAD
+        if (formato === 'celular') {
+            const separador1 = '(';
+            const separador2 = ')';
+            const separador3 = ' ';
+            const separador4 = '-';
+            const tamanho1 = 0;
+            const tamanho2 = 3; 
+            const tamanho4 = 10; 
+
+            if (campo.value.length === tamanho1) {
+                campo.value += separador1;
+            } else if (campo.value.length === tamanho2) {
+                campo.value += separador2 + separador3;
+            } else if (campo.value.length === tamanho4) {
+                campo.value += separador4;
+            }
+        }
+
+        if (formato === 'telefone') {
+            const separador1 = '(';
+            const separador2 = ')';
+            const separador3 = ' ';
+            const separador4 = '-';
+            const tamanho1 = 0; 
+            const tamanho2 = 3; 
+            const tamanho4 = 9; //
+
+            if (campo.value.length === tamanho1) {
+                campo.value += separador1;
+            } else if (campo.value.length === tamanho2) {
+                campo.value += separador2 + separador3;
+            } else if (campo.value.length === tamanho4) {
+                campo.value += separador4;
+            }
+        }
+
+        if (formato === 'cnpj') {
+            const separador1 = '.';
+            const separador2 = '/';
+            const separador3 = '-';
+            const tamanho1 = 2;
+            const tamanho2 = 6;
+            const tamanho3 = 10;
+            const tamanho4 = 15;
+
+            if (campo.value.length === tamanho1 || campo.value.length === tamanho2) {
+                campo.value += separador1;
+            } else if (campo.value.length === tamanho3) {
+                campo.value += separador2;
+            } else if (campo.value.length === tamanho4) {
+                campo.value += separador3;
+            }
+        }
+    }
+</script>
+=======
+      if (formato === "celular") {
+        const separador1 = "(";
+        const separador2 = ")";
+        const separador3 = " ";
+        const separador4 = "-";
         const tamanho1 = 0; // Tamanho do campo após o primeiro separador
         const tamanho2 = 3; // Tamanho do campo após o segundo separador
         const tamanho4 = 10; // Tamanho do campo após o quarto separador
 
         if (campo.value.length === tamanho1) {
-            campo.value += separador1;
+          campo.value += separador1;
         } else if (campo.value.length === tamanho2) {
-            campo.value += separador2 + separador3;
+          campo.value += separador2 + separador3;
         } else if (campo.value.length === tamanho4) {
-            campo.value += separador4;
+          campo.value += separador4;
         }
-    }
+      }
 
-    if (formato === 'telefone') {
-        const separador1 = '(';
-        const separador2 = ')';
-        const separador3 = ' ';
-        const separador4 = '-';
+      if (formato === "telefone") {
+        const separador1 = "(";
+        const separador2 = ")";
+        const separador3 = " ";
+        const separador4 = "-";
         const tamanho1 = 0; // Tamanho do campo após o primeiro separador
         const tamanho2 = 3; // Tamanho do campo após o segundo separador
         const tamanho4 = 9; // Tamanho do campo após o quarto separador
 
         if (campo.value.length === tamanho1) {
-            campo.value += separador1;
+          campo.value += separador1;
         } else if (campo.value.length === tamanho2) {
-            campo.value += separador2 + separador3;
+          campo.value += separador2 + separador3;
         } else if (campo.value.length === tamanho4) {
-            campo.value += separador4;
+          campo.value += separador4;
         }
+      }
     }
-}
-</script>
+  </script>
+>>>>>>> c724498a447de188add1bab2a593786aaacf16f2
 </html>

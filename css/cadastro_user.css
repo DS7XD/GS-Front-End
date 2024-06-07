@@ -4,12 +4,18 @@
     box-sizing: border-box;
 }
 
+#senha-error, #form-error {
+            color: red;
+            display: none;
+}
+
 body {
     background-color: #056595;
     display: flex;
     justify-content: center;
     align-items: center; 
-    height: 100vh; 
+    min-height: 100vh; 
+    padding: 20px;
 }
 
 header {
@@ -37,8 +43,9 @@ h1 {
 }
 
 .container {
-    width: 575px;
-    height: 767px;
+    width: 100%;
+    max-width: 575px;
+    height: auto;
     background-color: #ffffff; 
     display: flex;
     flex-direction: column;
@@ -47,6 +54,8 @@ h1 {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 10px; 
     padding: 20px; 
+    margin-top: 60px; 
+    margin-bottom: 60px;
 }
 
 h1 {
@@ -56,7 +65,8 @@ h1 {
 }
 
 form {
-    width: 80%;
+    width: 100%;
+    max-width: 500px;
     display: flex;
     flex-direction: column;
 }
@@ -108,4 +118,44 @@ footer {
     bottom: 0;
     left: 0;
     z-index: 1000;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 28px;
+    }
+
+    .container {
+        width: 90%;
+        padding: 15px;
+    }
+
+    form {
+        width: 100%;
+    }
+
+    button {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 24px;
+    }
+
+    .container {
+        width: 100%;
+        padding: 10px;
+    }
+
+    form {
+        width: 100%;
+    }
+
+    button {
+        font-size: 12px;
+        padding: 8px;
+    }
 }
