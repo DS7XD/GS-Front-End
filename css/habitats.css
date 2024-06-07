@@ -57,3 +57,43 @@ footer {
     left: 0;
     z-index: 1000;
 }
+
+/* Responsividade */
+@media (max-width: 1024px) {
+    .ong-card {
+        width: calc(50% - 2rem);
+    }
+}
+
+@media (max-width: 768px) {
+    main {
+        padding: 1rem;
+    }
+
+    .ong-card {
+        width: calc(100% - 2rem);
+    }
+}
+
+@media (max-width: 480px) {
+    header, footer {
+        padding: 0.5rem 0;
+    }
+
+    main {
+        padding: 0.5rem;
+    }
+
+    .ong-card {
+        margin: 0.5rem 0;
+        padding: 0.5rem;
+    }
+
+    .ong-card h2 {
+        font-size: 1.5rem;
+    }
+
+    .ong-card p {
+        font-size: 0.875rem;
+    }
+}

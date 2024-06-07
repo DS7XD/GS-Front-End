@@ -53,3 +53,46 @@ footer {
     bottom: 0;
     width: 100%;
 }
+
+/* Small devices (landscape phones, 576px and up) */
+@media (max-width: 575.98px) {
+    main {
+        padding: 1rem;
+        flex-direction: column;
+        align-items: center;
+    }
+    .ong-card {
+        width: 90%;
+        margin: 0.5rem 0;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    main {
+        padding: 1.5rem;
+    }
+    .ong-card {
+        width: calc(50% - 2rem);
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    main {
+        padding: 2rem;
+    }
+    .ong-card {
+        width: calc(33% - 2rem);
+    }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    main {
+        padding: 2.5rem;
+    }
+    .ong-card {
+        width: calc(25% - 2rem);
+    }
+}
