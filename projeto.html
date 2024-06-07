@@ -15,22 +15,23 @@
     </header>
     <main>
       <section class="PROJETO 1">
-        <h2>PROJETO:</h2>
-        <p><strong>Responsavel:</strong></p>
-        <p><strong>Região:</strong></p>
-        <p><strong>Descriçaõ:</strong></p>
+        <h2>PROJETO:Restaurção de Corais</h2>
+        <p><strong>Responsavel:</strong> Coral Restoration Foundation</p>
+        <p><strong>Ano:</strong> 2025</p>
+        <p><strong>Descriçaõ:</strong> Este projeto visa restaurar e monitorar recifes de corais em regiões afetadas pelo branqueamento de corais e atividades humanas. A iniciativa inclui a implantação de viveiros de corais e a educação comunitária sobre a importância dos recifes de corais.</p>
       </section>
       <section class="PROJETO 2">
-        <h2>PROJETO:</h2>
-        <p><strong>Responsavel</strong> Nordeste</p>
-        <p><strong>Região:</strong></p>
-        <p><strong>Descriçaõ:</strong></p>
+        <h2>PROJETO: Proteção Maritima</h2>
+        <p><strong>Responsavel</strong> Marine Conservation Society</p>
+        <p><strong>Ano:</strong> 2024</p>
+        <p><strong>Descriçaõ:</strong> O objetivo deste projeto é proteger e restaurar prados de ervas marinhas. O projeto envolve a remoção de detritos, a restauração de habitats danificados, e a pesquisa sobre os benefícios ecológicos das ervas marinhas.</p>
       </section>
       <section class="PROJETO 3">
-        <h2>PROJETO:</h2>
-        <p><strong>Responsavel</strong> Sul</p>
-        <p><strong>Região:</strong></p>
-        <p><strong>Descriçaõ:</strong></p>
+        <h2>PROJETO: Acões de Restauração</h2>
+        <p><strong>Responsavel</strong> Mangrove Action Project</p>
+        <p><strong>Ano:</strong> 2026</p>
+        <p><strong>Descriçaõ:</strong> Este projeto global visa restaurar manguezais em áreas costeiras críticas. As atividades incluem o plantio de mudas de mangue, o envolvimento das comunidades locais em práticas de conservação sustentável e o monitoramento de mudanças na biodiversidade.</p>
+        
       </section>
     </main>
     <footer>
@@ -62,6 +63,7 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: space-around;
+      margin: 0 auto; 
     }
 
     .ong-card {
@@ -71,9 +73,12 @@
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
       margin: 1rem;
       padding: 1rem;
-      width: calc(33% - 2rem);
+      min-width: 300px;
       box-sizing: border-box;
       transition: transform 0.2s;
+      display: flex; 
+      flex-direction: column; 
+      flex-grow: 1; 
     }
 
     .ong-card:hover {
@@ -86,6 +91,7 @@
 
     .ong-card p {
       margin: 0.5rem 0;
+      line-height: 1.5; 
     }
 
     footer {
@@ -93,9 +99,9 @@
       color: white;
       text-align: center;
       padding: 1rem 0;
-      position: absolute;
-      bottom: 0;
+      position: relative;
       width: 100%;
+      bottom: 0;
     }
   </style>
 </html>

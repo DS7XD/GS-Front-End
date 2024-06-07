@@ -4,23 +4,23 @@ body {
     padding: 0;
     background-color: #f4f4f4;
     color: #333;
-}
+  }
 
-header {
+  header {
     background-color: blue;
     color: white;
     padding: 1rem 0;
     text-align: center;
-}
+  }
 
-main {
+  main {
     padding: 2rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-}
+  }
 
-.ong-card {
+  .habitat-card {
     background-color: white;
     border: 1px solid #ddd;
     border-radius: 5px;
@@ -30,21 +30,21 @@ main {
     width: calc(33% - 2rem);
     box-sizing: border-box;
     transition: transform 0.2s;
-}
+  }
 
-.ong-card:hover {
+  .habitat-card:hover {
     transform: scale(1.05);
-}
+  }
 
-.ong-card h2 {
+  .habitat-card h2 {
     color: blue;
-}
+  }
 
-.ong-card p {
+  .habitat-card p {
     margin: 0.5rem 0;
-}
+  }
 
-footer {
+  footer {
     width: 100%;
     background-color: #D9D9D9;
     text-align: center;
@@ -52,12 +52,10 @@ footer {
     font-style: italic;
     font-weight: bold;
     padding: 10px 0;
-    position: fixed;
+    position: relative;
     bottom: 0;
     left: 0;
-    z-index: 1000;
-}
-
+  }
 /* Responsividade */
 @media (max-width: 1024px) {
     .ong-card {
