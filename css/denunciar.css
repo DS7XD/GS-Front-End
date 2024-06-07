@@ -5,8 +5,8 @@
 }
 
 #senha-error, #form-error {
-            color: red;
-            display: none;
+    color: red;
+    display: none;
 }
 
 body {
@@ -14,8 +14,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center; 
-    min-height: 100vh; 
-    padding: 20px;
+    height: 100vh; 
+    padding: 20px; /* Adicionado para evitar corte em telas pequenas */
 }
 
 header {
@@ -44,7 +44,7 @@ h1 {
 
 .container {
     width: 100%;
-    max-width: 575px;
+    max-width: 575px; /* Limitar largura máxima para telas maiores */
     height: auto;
     background-color: #ffffff; 
     display: flex;
@@ -54,8 +54,8 @@ h1 {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 10px; 
     padding: 20px; 
-    margin-top: 60px; 
-    margin-bottom: 60px;
+    margin-top: 60px; /* Adicionado para espaçar abaixo do header */
+    margin-bottom: 60px; /* Adicionado para espaçar acima do footer */
 }
 
 h1 {
@@ -66,7 +66,7 @@ h1 {
 
 form {
     width: 100%;
-    max-width: 500px;
+    max-width: 500px; /* Limitar largura máxima para o formulário */
     display: flex;
     flex-direction: column;
 }
@@ -84,6 +84,30 @@ input {
     border-radius: 5px;
     background-color: #ffffff;
     box-sizing: border-box; 
+}
+
+input[type="radio"] {
+    display: inline;
+    margin: 0 10px 0 0;
+}
+
+label {
+    display: inline;
+    margin: 0 10px 0 0;
+}
+
+.radio-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.radio-group input[type="radio"] {
+    margin: 0 10px 0 0;
+}
+
+.radio-group label {
+    margin: 0 10px 0 0;
 }
 
 button {
@@ -120,7 +144,6 @@ footer {
     z-index: 1000;
 }
 
-/* Responsividade */
 @media (max-width: 768px) {
     h1 {
         font-size: 28px;

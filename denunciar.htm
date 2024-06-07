@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlueWave - Cadastro de ONG</title>
+    <link rel="icon" href="img/icone/icon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/denunciar.css">
+</head>
+<body>
+    <header>
+        <h1 id="BlueWave"><span class="blue">Blue</span><span class="black">Wave</span></h1>
+    </header>
+    <div class="container">
+        <h1>Denunciar</h1>
+        <form id="denunciaForm" enctype="multipart/form-data">
+
+            <div class="radio-group">
+                <input type="radio" id="oceano" name="oqueDenunciar" value="oceano">
+                <label for="oceano">Poluição no Oceano</label>
+                <input type="radio" id="pesca" name="oqueDenunciar" value="pesca">
+                <label for="pesca">Pesca Ilegal</label>
+            </div>
+
+            <label for="local">Insira o local:</label>
+            <input type="text" id="local" name="local" placeholder="Insira o local" required>
+
+            <label for="data">Data Aproximada do Acontecimento (dia/mês):</label>
+            <input type="date" id="data" name="data" required>
+
+            <label for="horario">Horário Aproximado do Acontecimento (hora:minuto):</label>
+            <input type="time" id="horario" name="horario" required>
+
+            <label for="presenciou">Insira o que você presenciou:</label>
+            <input type="text" id="presenciou" name="presenciou" placeholder="Insira o que você presenciou" required>
+
+            <label for="suspeitos">Você viu algum suspeito? Se sim, descreva-o:</label>
+            <input type="text" id="suspeitos" name="suspeitos" placeholder="Você viu algum suspeito? Se sim, descreva-o" required>
+
+            <label for="testemunhas">Havia outras testemunhas? Se sim, descreva-as:</label>
+            <input type="text" id="testemunhas" name="testemunhas" placeholder="Havia outras testemunhas? Se sim, descreva-as:" required>
+
+            <label for="imagens">Tirou fotos? Envie-as:</label>
+
+            <input type="file" id="imagens" name="imagens" accept="image/*" multiple>
+
+            <div id="form-error" style="display: none;">Todos os campos devem ser preenchidos corretamente.</div>
+
+            <button type="button" class="button" onclick="validarFormulario()">Enviar</button>
+        </form>
+    </div>
+    <footer>
+        <p>© BlueWave 2024</p>
+        <p>551124 - Lucas Leal das Chagas | 554874 - João Gabriel Boaventura Marques e Silva | 558791 - Lucas de Melo Pinheiro Pinho</p>
+    </footer>
+<script>
+    function validarFormulario() {
+        var local = document.getElementById("local").value;
+        var data = document.getElementById("data").value;
+        var horario = document.getElementById("horario").value;
+        var presenciou = document.getElementById("presenciou").value;
+        var suspeitos = document.getElementById("suspeitos").value;
+        var testemunhas = document.getElementById("testemunhas").value;
+
+        if (!local || !data || !horario || !presenciou || !suspeitos || !testemunhas) {
+            document.getElementById("form-error").style.display = "block";
+            return false;
+        } else {
+            document.getElementById("form-error").style.display = "none";
+        }
+
+        document.getElementById("denunciaForm").submit();
+        window.location.href = 'menu.html';
+    }
+</script>
+</body>
+</html>

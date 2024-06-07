@@ -4,6 +4,11 @@
     box-sizing: border-box;
 }
 
+#senha-error, #form-error {
+    color: red;
+    display: none;
+}
+
 body {
     background-color: #056595;
     display: flex;
