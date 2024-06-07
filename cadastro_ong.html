@@ -1,97 +1,137 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BlueWave - Cadastro de ONG</title>
-    <link rel="icon" href="img/icone/icon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="css/cadastro_org.css">
-</head>
-<body>
+    <link rel="icon" href="img/icone/icon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="css/cadastro_org.css" />
+  </head>
+  <body>
     <header>
-        <h1 id="BlueWave"><span class="blue">Blue</span><span class="black">Wave</span></h1>
+      <h1 id="BlueWave">
+        <span class="blue">Blue</span><span class="black">Wave</span>
+      </h1>
     </header>
     <div class="container">
-        <h1>Cadastro de usuário</h1>
-        <form action="login.html" method="post" onsubmit="return validarSenha()">
-            <label for="nome">Insira o nome da ONG:</label>
-            <input type="text" id="nome" name="nome" placeholder="NOME" required>
-            
-            <label for="telefone">Insira seu número de telefone para contato:</label>
-            <input type="text" id="telfone" name="telefone" onkeydown="aplicarMascara(this, 'telefone')" maxlength="14" placeholder="NÚMERO DE TELEFONE (DIGITE APENAS OS NÚMEROS)" required>
+      <h1>Cadastro de usuário</h1>
+      <form action="login.html" method="post" onsubmit="return validarSenha()">
+        <label for="nome">Insira o nome da ONG:</label>
+        <input type="text" id="nome" name="nome" placeholder="NOME" required />
 
-            <label for="celular">Insira seu número de celular para contato:</label>
-            <input type="text" id="celular" name="celular" onkeydown="aplicarMascara(this, 'celular')" maxlength="15" placeholder="NÚMERO DE CELULAR (DIGITE APENAS OS NÚMEROS) 𝙊𝙋𝙄𝘾𝙄𝙊𝙉𝘼𝙇">
+        <label for="telefone"
+          >Insira seu número de telefone para contato:</label
+        >
+        <input
+          type="text"
+          id="telfone"
+          name="telefone"
+          onkeydown="aplicarMascara(this, 'telefone')"
+          maxlength="14"
+          placeholder="NÚMERO DE TELEFONE (DIGITE APENAS OS NÚMEROS)"
+          required
+        />
 
-            <label for="email">Insira um email:</label>
-            <input type="email" id="email" name="email" placeholder="EMAIL"required>
+        <label for="celular">Insira seu número de celular para contato:</label>
+        <input
+          type="text"
+          id="celular"
+          name="celular"
+          onkeydown="aplicarMascara(this, 'celular')"
+          maxlength="15"
+          placeholder="NÚMERO DE CELULAR (DIGITE APENAS OS NÚMEROS) 𝙊𝙋𝙄𝘾𝙄𝙊𝙉𝘼𝙇"
+        />
 
-            <label for="senha">Insira uma senha:</label>
-            <input type="password" id="senha" name="senha" placeholder="SENHA" required>
+        <label for="email">Insira um email:</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="EMAIL"
+          required
+        />
 
-            <label for="confirma-senha">Confirme a senha:</label>
-            <input type="password" id="confirma-senha" name="confirma-senha" placeholder="CONFIRMAR SENHA" required>
+        <label for="senha">Insira uma senha:</label>
+        <input
+          type="password"
+          id="senha"
+          name="senha"
+          placeholder="SENHA"
+          required
+        />
 
-            <div id="senha-error">As senhas não correspondem.</div>
+        <label for="confirma-senha">Confirme a senha:</label>
+        <input
+          type="password"
+          id="confirma-senha"
+          name="confirma-senha"
+          placeholder="CONFIRMAR SENHA"
+          required
+        />
 
-            <button type="submit">Cadastrar</button>
-        </form>
+        <div id="senha-error">As senhas não correspondem.</div>
+
+        <button type="submit">Cadastrar</button>
+      </form>
     </div>
     <footer>
-        <p>© BlueWave 2024</p>
-        <p>551124 - Lucas Leal das Chagas | 554874 - João Gabriel Boaventura Marques e Silva | 558791 - Lucas de Melo Pinheiro Pinho</p>
+      <p>© BlueWave 2024</p>
+      <p>
+        551124 - Lucas Leal das Chagas | 554874 - João Gabriel Boaventura
+        Marques e Silva | 558791 - Lucas de Melo Pinheiro Pinho
+      </p>
     </footer>
-</body>
-<script>
+  </body>
+  <script>
     function validarSenha() {
-        var senha = document.getElementById("senha").value;
-        var confirmaSenha = document.getElementById("confirma-senha").value;
+      var senha = document.getElementById("senha").value;
+      var confirmaSenha = document.getElementById("confirma-senha").value;
 
-        if (senha !== confirmaSenha) {
-            document.getElementById("senha-error").style.display = "block";
-            return false;
-        } else {
-            document.getElementById("senha-error").style.display = "none";
-            return true;
-        }
+      if (senha !== confirmaSenha) {
+        document.getElementById("senha-error").style.display = "block";
+        return false;
+      } else {
+        document.getElementById("senha-error").style.display = "none";
+        return true;
+      }
     }
 
     function aplicarMascara(campo, formato) {
-    if (formato === 'celular') {
-        const separador1 = '(';
-        const separador2 = ')';
-        const separador3 = ' ';
-        const separador4 = '-';
+      if (formato === "celular") {
+        const separador1 = "(";
+        const separador2 = ")";
+        const separador3 = " ";
+        const separador4 = "-";
         const tamanho1 = 0; // Tamanho do campo após o primeiro separador
         const tamanho2 = 3; // Tamanho do campo após o segundo separador
         const tamanho4 = 10; // Tamanho do campo após o quarto separador
 
         if (campo.value.length === tamanho1) {
-            campo.value += separador1;
+          campo.value += separador1;
         } else if (campo.value.length === tamanho2) {
-            campo.value += separador2 + separador3;
+          campo.value += separador2 + separador3;
         } else if (campo.value.length === tamanho4) {
-            campo.value += separador4;
+          campo.value += separador4;
         }
-    }
+      }
 
-    if (formato === 'telefone') {
-        const separador1 = '(';
-        const separador2 = ')';
-        const separador3 = ' ';
-        const separador4 = '-';
+      if (formato === "telefone") {
+        const separador1 = "(";
+        const separador2 = ")";
+        const separador3 = " ";
+        const separador4 = "-";
         const tamanho1 = 0; // Tamanho do campo após o primeiro separador
         const tamanho2 = 3; // Tamanho do campo após o segundo separador
         const tamanho4 = 9; // Tamanho do campo após o quarto separador
 
         if (campo.value.length === tamanho1) {
-            campo.value += separador1;
+          campo.value += separador1;
         } else if (campo.value.length === tamanho2) {
-            campo.value += separador2 + separador3;
+          campo.value += separador2 + separador3;
         } else if (campo.value.length === tamanho4) {
-            campo.value += separador4;
+          campo.value += separador4;
         }
+      }
     }
-}
-</script>
+  </script>
 </html>
