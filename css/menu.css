@@ -5,7 +5,6 @@ body {
     background-color: #f0f0f0;
 }
 
-
 header {
     background-color: #007BFF; 
     color: white;
@@ -24,12 +23,10 @@ header img {
     max-width: 100px; 
 }
 
-
 main {
     padding: 20px;
     text-align: center;
 }
-
 
 footer {
     background-color: #007BFF; 
@@ -41,19 +38,18 @@ footer {
     bottom: 0;
 }
 
-
 nav {
     margin: 20px 0;
-    color:white;
 }
 
 nav ul {
     list-style-type: none;
     padding: 0;
+    text-align: center; /* Centraliza os itens do menu em telas pequenas */
 }
 
 nav ul li {
-    display: inline;
+    display: inline-block; /* Mantém os itens em linha, mas permite quebrar linha em telas pequenas */
     margin: 0 10px;
 }
 
@@ -64,8 +60,55 @@ nav ul li a {
     text-decoration: none;
     border-radius: 5px;
     transition: background-color 0.3s ease;
+    display: block; /* Permite que o padding funcione corretamente */
 }
 
 nav ul li a:hover {
     background-color: #0056b3;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    header img {
+        max-width: 80px;
+    }
+
+    nav ul li {
+        display: block; /* Faz os itens do menu ficarem em blocos em telas pequenas */
+        margin: 10px 0;
+    }
+
+    nav ul li a {
+        padding: 10px 15px; /* Ajusta o padding para telas menores */
+    }
+
+    footer {
+        padding: 15px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5em;
+    }
+
+    header img {
+        max-width: 60px;
+    }
+
+    main {
+        padding: 10px;
+    }
+
+    nav ul li a {
+        padding: 8px 10px; /* Ajusta o padding para telas menores */
+    }
+
+    footer {
+        padding: 10px 0;
+    }
 }
