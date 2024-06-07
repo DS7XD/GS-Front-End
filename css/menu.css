@@ -26,17 +26,19 @@ header img {
 main {
     padding: 20px;
     text-align: center;
+    margin-bottom: 130px; 
 }
 
 footer {
     background-color: #007BFF; 
     color: white;
     text-align: center;
-    padding: 10px 0;
+    padding: 20px 0;
     position: fixed;
     width: 100%;
     bottom: 0;
 }
+
 
 nav {
     margin: 20px 0;

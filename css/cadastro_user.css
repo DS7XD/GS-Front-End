@@ -46,17 +46,18 @@ h1 {
     width: 100%;
     max-width: 575px;
     height: auto;
-    background-color: #ffffff; 
+    background-color: #ffffff;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 10px; 
-    padding: 20px; 
-    margin-top: 60px; 
-    margin-bottom: 60px;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 60px;
+    margin-bottom: 120px;
 }
+
 
 h1 {
     margin-bottom: 20px;

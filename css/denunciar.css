@@ -15,7 +15,7 @@ body {
     justify-content: center;
     align-items: center; 
     height: 100vh; 
-    padding: 20px; /* Adicionado para evitar corte em telas pequenas */
+    padding: 20px; 
 }
 
 header {
@@ -28,6 +28,40 @@ header {
     left: 0;
     z-index: 1000;
 }
+
+.container {
+    width: 100%;
+    max-width: 575px;
+    height: auto;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 330px;  /* Ajuste na margem superior */
+    margin-bottom: 330px;  /* Ajuste na margem inferior */
+    position: relative;
+    z-index: 1;
+}
+
+footer {
+    width: 100%;
+    background-color: #D9D9D9;
+    text-align: center;
+    font-size: 16px;
+    font-style: italic;
+    font-weight: bold;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    margin-top: 330px; 
+}
+
 
 h1 {
     margin: 0;
@@ -42,22 +76,6 @@ h1 {
     color: blue;
 }
 
-.container {
-    width: 100%;
-    max-width: 575px; /* Limitar largura máxima para telas maiores */
-    height: auto;
-    background-color: #ffffff; 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 10px; 
-    padding: 20px; 
-    margin-top: 60px; /* Adicionado para espaçar abaixo do header */
-    margin-bottom: 60px; /* Adicionado para espaçar acima do footer */
-}
-
 h1 {
     margin-bottom: 20px;
     font-size: 24px; 
@@ -66,7 +84,7 @@ h1 {
 
 form {
     width: 100%;
-    max-width: 500px; /* Limitar largura máxima para o formulário */
+    max-width: 500px; 
     display: flex;
     flex-direction: column;
 }
@@ -118,8 +136,11 @@ button {
     color: white;
     cursor: pointer;
     font-size: 16px;
-    transition: background-color 0.3s; 
+    transition: background-color 0.3s;
+    z-index: 3; 
 }
+
+
 
 button:hover {
     background-color: #0056b3;
@@ -130,19 +151,7 @@ button:hover {
     display: none;
 }
 
-footer {
-    width: 100%;
-    background-color: #D9D9D9;
-    text-align: center;
-    font-size: 16px;
-    font-style: italic;
-    font-weight: bold;
-    padding: 10px 0;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    z-index: 1000;
-}
+
 
 @media (max-width: 768px) {
     h1 {
