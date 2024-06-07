@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlueWave - Página Inicial</title>
+    <link rel="icon" href="img/icone/icon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1 id="BlueWave"><span class="blue">Blue</span><span class="black">Wave</span></h1>
+        <nav>
+            <ul>
+                <li><a href="parceiros.html">Parceiros</a></li>
+                <li><a href="projeto.html">Projetos</a></li>
+                <li><a href="habitats.html">Habitats</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Bem-vindo à página inicial!</h2>
+        <p>Aqui você pode encontrar informações sobre diferentes áreas de atuação da BlueWave.</p>
+    </main>
+    <footer>
+        <p>© BlueWave 2024</p>
+        <p>551124 - Lucas Leal das Chagas | 554874 - João Gabriel Boaventura Marques e Silva | 558791 - Lucas de Melo Pinheiro Pinho</p>
+    </footer>
+</body>
+<style>
+
+* {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Estilos para o cabeçalho */
+header {
+    background-color: #056595;
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+/* Estilos para o menu */
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #f0f0f0;
+}
+
+/* Estilos para o conteúdo principal */
+main {
+    padding: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+/* Estilos para os cartões de ONG */
+.ong-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 1rem;
+    padding: 1rem;
+    width: calc(33% - 2rem);
+    box-sizing: border-box;
+    transition: transform 0.2s;
+}
+
+.ong-card:hover {
+    transform: scale(1.05);
+}
+
+.ong-card p {
+    margin: 0.5rem 0;
+}
+
+/* Estilos para o rodapé */
+footer {
+    width: 100%;
+    background-color: #D9D9D9;
+    text-align: center;
+    font-size: 16px;
+    font-style: italic;
+    font-weight: bold;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+}
+</style>
+</html>
